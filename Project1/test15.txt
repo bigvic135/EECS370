@@ -1,0 +1,19 @@
+        lw      0       1       one
+        lw      1       2       data
+        lw      0       3       data
+        nor     2       2       5
+        add     1       5       5
+        nor     5       5       5
+loop    beq     5       3       done
+        lw      0       4       res
+        add     4       2       4
+        sw      0       4       res
+        add     1       3       3
+        beq     0       0       loop
+done    halt
+one     .fill   1
+data    .fill   0
+base    .fill   6
+        .fill   -10
+        .fill   2
+res     .fill   3

@@ -1,0 +1,9 @@
+    sw      0       1       2
+    lw      1       2       -327
+five   nor     1       2       1
+    beq     0       0       start
+    noop
+done    halt
+start    .fill   5
+neg1    .fill   -1
+stAddr  .fill   start

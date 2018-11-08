@@ -1,0 +1,42 @@
+        lw      0       1       n       r1 = memory[n]
+        lw      0       2       r       r2 = memory[r]
+        lw      0       4       Caddr     r6 = lmao
+        jalr    4       7               call lmao; r7 = end of function; r3 = answer
+        lw      0       6       one     r6 = 1
+        add     4       6       4
+        add     0       4       3       load r3 = answer
+        halt
+lmao    lw      0       6       one     r6 = 1 (temp address in this case)
+        sw      5       7       stack   save r7 (return address) on stack
+        add     5       6       5       increment stack pointer
+        sw      5       1       stack   save r1(n) on stack1
+        add     5       6       5       increment stack pointer
+        sw      5       2       stack   save r2(r) on stack2
+        add     5       6       5       increment stack pointer
+        beq     0       2       new     base case - if r == 0, new
+        beq     1       2       new     base case 2 - if r == n, new
+        lw      0       6       neg1    r6 = -1 (temp address)
+        add     1       6       1       n = n - 1 (decrement register 1 val)
+        lw      0       4       Caddr   prepare to call lmao
+        jalr    4       7               call lmao(n-1, r)
+        lw      0       6       neg1    r6 = -1
+        add     2       6       2       r = r - 1 (decrement register 2 val)
+        lw      0       4       Caddr   prepare to call lmao
+        jalr    4       7               call lmao(n-1, r-1)
+        lw      0       6       one     r6 = 1
+        add     4       6       4       r4 = r4 + 1
+new     lw      0       6       neg1    r6 = -1
+        add     5       6       5       decrement stack pointer
+        lw      5       2       stack   recover orginal r2
+        add     5       6       5       decrement stack pointer
+        lw      5       1       stack   recover original r1
+        add     5       6       5       decrement stack pointer
+        lw      5       7       stack   recover original return address
+        jalr    7       6               return.  r4 is not restored.
+n       .fill   7
+r       .fill   3
+one     .fill   1
+neg1    .fill   -1
+Caddr   .fill   lmao
+stack   .fill   0
+stack1  .fill   0
