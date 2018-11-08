@@ -1,0 +1,12 @@
+        lw      0       1       one
+        lw      0       2       num1
+        lw      0       3       num2
+        nor     3       3       3
+        add     1       3       3
+        add     3       3       3
+        noop
+        add     3       3       4
+        halt
+one     .fill   1
+num1    .fill   5
+num2    .fill   3
