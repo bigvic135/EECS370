@@ -1,0 +1,9 @@
+		add		2	1	3
+Vape	sw		3	1	Piz
+		lw		3	5	Weed
+		sw		2	0	Vape
+Ass		sw		1	6	Poop
+		lw		0	1	Pens
+Pens	.fill	-5
+		.fill	Stack
+	    .fill	Weed

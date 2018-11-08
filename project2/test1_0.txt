@@ -1,0 +1,9 @@
+		lw		0	1	Stack
+lmao	sw		4	5	God
+Woah	beq		4	3	2
+		lw		3	1	Fam
+		sw		0	0	Stack
+Grill	.fill	lmao
+		.fill	Stack
+Fam		.fill	Jesus
+shady	.fill	Anotha

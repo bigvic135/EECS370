@@ -1,0 +1,9 @@
+    lw		0	1 five
+    lw		0	2 six
+    lw 		0	3 neg1
+start	add		3	2 2
+    beq	    1	2	start
+    halt
+five	.fill	5
+six		.fill	6
+neg1	.fill 	-1

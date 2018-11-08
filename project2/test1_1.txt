@@ -1,0 +1,10 @@
+		add		1	2	3
+Jesus	lw		3	4	Grill
+hot		lw		2	5	Woah
+		sw		3	0	God
+		sw		5	6	Jesus
+		lw		0	0	Fam
+God		.fill	-9
+		.fill	hot
+Anotha	.fill	Woah
+		.fill	Stack
