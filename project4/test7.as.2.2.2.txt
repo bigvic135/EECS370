@@ -1,0 +1,11 @@
+ lw 0 1 size
+ lw 0 3 val
+loop add 1 3 3
+ lw 4 3 data
+ lw 3 4 data
+ nor 3 1 5
+ beq 4 1 loop
+ halt
+size .fill 111
+val .fill 370
+data .fill 4

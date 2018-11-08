@@ -1,0 +1,14 @@
+main lw 0 1 five
+ lw 0 2 ten
+ lw 0 3 one
+ nor 1 1 1
+ add 3 1 1
+ add 2 1 1
+for beq 1 4 done
+ add 2 2 2
+ add 4 3 4
+ beq 0 0 for
+done halt
+ten .fill 10
+five .fill 5
+one .fill 1

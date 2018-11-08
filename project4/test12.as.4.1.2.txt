@@ -1,0 +1,32 @@
+ lw 0 1 one
+ lw 0 4 magic
+lit lw 0 2 array
+ add 0 0 7
+litty add 2 1 3
+ lw 2 5 0
+ lw 3 6 0
+ beq 5 6 jump
+ nor 5 0 5
+ add 5 1 5
+ add 5 6 5
+ nor 5 4 5
+ beq 0 5 jump
+ lw 2 5 0
+ sw 2 6 0
+ sw 3 5 0
+ add 0 1 7
+jump lw 2 5 0
+ beq 6 0 tester
+ add 1 2 2
+ beq 0 0 litty
+tester beq 7 0 end
+ halt
+ beq 0 0 lit
+end halt
+one .fill 1
+array .fill arr0
+magic .fill 2147483647
+arr0 .fill 10
+arr1 .fill 20
+arr2 .fill 2
+arr3 .fill 0

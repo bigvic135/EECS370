@@ -1,0 +1,30 @@
+ lw 0 1 one
+ add 0 0 2
+ lw 0 3 size
+ lw 0 4 num
+ lw 0 5 size
+ jalr 5 6 
+end halt
+loop beq 2 3 done
+ lw 2 5 arr
+ beq 5 4 done
+ add 1 2 2 
+ beq 0 0 loop
+done beq 2 3 error
+ beq 0 2 7
+ beq 0 0 return
+error lw 0 7 neg1
+return jalr 6 5
+one .fill 1
+neg1 .fill -1
+num .fill 53
+size .fill 7
+arr .fill 54
+ .fill 8 
+ .fill 43
+ .fill 0
+ .fill 20
+ .fill 33
+ .fill 37 
+ .fill 53
+ .fill 30

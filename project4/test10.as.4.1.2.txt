@@ -1,0 +1,24 @@
+ lw 0 1 result
+ lw 0 2 mcand
+ lw 0 3 mplier
+ lw 0 4 odder
+ lw 0 5 negone 
+ lw 0 6 lim
+ lw 0 7 one
+loop beq 5 6 end
+ nor 2 4 7
+ beq 0 7 odd
+even add 3 3 3
+ add 5 4 4
+ add 5 5 5 
+ beq 0 0 loop
+odd add 3 1 1
+ beq 0 0 even
+end halt
+mcand .fill 15
+mplier .fill 10
+negone .fill -1
+lim .fill -32768
+odder .fill -2
+result .fill 0
+one .fill 1

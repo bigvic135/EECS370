@@ -1,0 +1,10 @@
+ lw 0 3 data1
+ lw 0 2 data2
+loop beq 0 3 stop
+ add 4 1 5
+ add 2 3 3
+ nor 5 1 6
+ beq 0 0 loop
+stop halt
+data1 .fill 15
+data2 .fill -5
